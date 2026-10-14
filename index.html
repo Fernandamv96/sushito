@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@1,600;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#" class="logo">S<span>U</span>SHITO</a>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#piezas">Nigiri</a>
+      <a href="#">Combos</a>
+      <a href="#">Contacto</a>
+    </nav>
+    <div class="nav-acciones">
+      <button class="icono" aria-label="Buscar">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <a href="#" class="link-login">Ingresar</a>
+      <a href="#" class="btn-outline btn-sm">Registrarse</a>
+      <button class="icono" aria-label="Menú">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="brillo"></div>
+    <div class="semillas" aria-hidden="true"></div>
+
+    <h1 class="titulo">SUSHITO</h1>
+
+    <!-- Rieles laterales -->
+    <div class="riel riel-izq" aria-hidden="true">
+      <span>Síguenos</span>
+      <i class="rombo"></i>
+      <span>Desliza</span>
+    </div>
+    <div class="riel riel-der" aria-hidden="true">
+      <span>Hecho a mano</span>
+    </div>
+
+    <!-- Sushi por capas: 4 PNG del mismo tamaño que se apilan exactamente -->
+    <div class="producto">
+      <img class="capa capa-arroz" src="img/capa-arroz.png" alt="Nigiri de salmón Sushito">
+      <img class="capa capa-salmon" src="img/capa-salmon.png" alt="">
+      <img class="capa capa-cebollin" src="img/capa-cebollin.png" alt="">
+      <img class="capa capa-gota" src="img/capa-gota.png" alt="">
+    </div>
+    <img class="wasabi" src="img/wasabi.png" alt="">
+
+    <!-- Texto izquierda -->
+    <div class="intro">
+      <p>Salmón fresco cortado al momento, arroz de grano corto y wasabi recién rallado. Así es Sushito.</p>
+      <div class="intro-botones">
+        <a href="#menu" class="btn">Ordenar ahora</a>
+        <a href="#" class="btn-outline">Nuestra historia</a>
+      </div>
+    </div>
+
+    <!-- Bloque derecha -->
+    <div class="lateral-der">
+      <label class="buscador">
+        <input type="text" placeholder="Busca tu roll">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </label>
+      <div class="precio">
+        <span class="etiqueta">Promo de la semana</span>
+        <span class="numero">15% Off</span>
+      </div>
+      <a href="#" class="agregar">Agregar al pedido <span>→</span></a>
+    </div>
+
+    <!-- Tarjeta inferior izquierda -->
+    <div class="tarjeta">
+      <p class="tarjeta-kicker">Recetas</p>
+      <div class="tarjeta-fila">
+        <img class="mini-sushi" src="img/nigiri-par.png" alt="">
+        <div>
+          <p class="tarjeta-titulo">Nigiri de salmón</p>
+          <p class="tarjeta-sub">Salmón · Arroz · 10 min</p>
+        </div>
+        <span class="flecha">›</span>
+      </div>
+    </div>
+
+    <button class="chat" aria-label="Chat">
+      <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg>
+    </button>
+  </section>
+
+  <section class="piezas" id="piezas">
+    <div class="piezas-encabezado">
+      <p class="kicker">Directo de los palillos</p>
+      <h2>Elige tu <em>pieza</em></h2>
+    </div>
+    <article class="pieza pieza-izq">
+      <img src="img/pieza-1.png" alt="Nigiri ebi tomado con palillos">
+      <div class="pieza-texto">
+        <span class="plato-num">01</span>
+        <h3>Nigiri ebi</h3>
+        <p>Camarón cocido sobre arroz avinagrado.</p>
+        <div class="pieza-pie"><b>$3.990</b><a href="#" class="btn-outline btn-sm">+ Agregar</a></div>
+      </div>
+    </article>
+    <article class="pieza pieza-der">
+      <img src="img/pieza-2.png" alt="Gunkan de wakame tomado con palillos">
+      <div class="pieza-texto">
+        <span class="plato-num">02</span>
+        <h3>Gunkan wakame</h3>
+        <p>Ensalada de algas marinadas en sésamo, envuelta en nori.</p>
+        <div class="pieza-pie"><b>$3.490</b><a href="#" class="btn-outline btn-sm">+ Agregar</a></div>
+      </div>
+    </article>
+    <article class="pieza pieza-izq">
+      <img src="img/pieza-3.png" alt="Gunkan de ikura tomado con palillos">
+      <div class="pieza-texto">
+        <span class="plato-num">03</span>
+        <h3>Gunkan ikura</h3>
+        <p>Huevas de salmón brillantes sobre arroz y nori.</p>
+        <div class="pieza-pie"><b>$5.490</b><a href="#" class="btn-outline btn-sm">+ Agregar</a></div>
+      </div>
+    </article>
+    <article class="pieza pieza-der">
+      <img src="img/pieza-4.png" alt="Nigiri de salmón tomado con palillos">
+      <div class="pieza-texto">
+        <span class="plato-num">04</span>
+        <h3>Nigiri sake</h3>
+        <p>Salmón fresco con un toque de cebollín.</p>
+        <div class="pieza-pie"><b>$4.290</b><a href="#" class="btn-outline btn-sm">+ Agregar</a></div>
+      </div>
+    </article>
+    <article class="pieza pieza-izq">
+      <img src="img/pieza-5.png" alt="Gunkan del chef tomado con palillos">
+      <div class="pieza-texto">
+        <span class="plato-num">05</span>
+        <h3>Gunkan del chef</h3>
+        <p>La creación del día, siempre distinta.</p>
+        <div class="pieza-pie"><b>$4.990</b><a href="#" class="btn-outline btn-sm">+ Agregar</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="menu" id="menu">
+    <h2>Menú <em>destacado</em></h2>
+    <div class="menu-grid">
+      <article class="plato"><img src="img/nigiri-salmon.png" alt="Nigiri de salmón"><span class="plato-num">01</span><h3>Nigiri de salmón</h3><p>Salmón fresco sobre arroz de grano corto.</p><b>$4.990</b></article>
+      <article class="plato"><img src="img/roll-salmon.png" alt="Roll envuelto en salmón"><span class="plato-num">02</span><h3>Roll Sushito</h3><p>Envuelto en salmón, queso crema y pepino.</p><b>$7.490</b></article>
+      <article class="plato"><img src="img/nigiri-ebi.png" alt="Nigiri de camarón"><span class="plato-num">03</span><h3>Nigiri ebi</h3><p>Camarón cocido sobre arroz de sushi.</p><b>$4.590</b></article>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
